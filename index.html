@@ -1,1 +1,140 @@
-in development....
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREAX WIKI</title>
+  <link rel="icon" href="https://freax.wtf/favicon.ico">
+  <!-- Meta Tags -->
+  <meta name="title" content="FREAX.WTF WIKI">
+  <meta name="description" content="THE FIRST DISCORD TECH COMMUNITY BRIDGE">
+  <style>
+    @font-face { font-family: 'TitleFont'; src: url('https://freax.wtf/title.ttf') format('truetype'); }
+    @font-face { font-family: 'HeaderFont'; src: url('https://freax.wtf/header.ttf') format('truetype'); }
+    @font-face { font-family: 'BodyFont'; src: url('https://freax.wtf/body.ttf') format('truetype'); }
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --accent: #ffdd55;
+      --card: #1b1b1b;
+      --border: #333;
+      --radius: 6px;
+      --indent-step: 1rem;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--bg) url('') center/cover no-repeat;
+      color: var(--fg);
+      font-family: 'BodyFont', monospace;
+    }
+    a { color: var(--accent); text-decoration: none; position: relative; }
+    a:hover { text-decoration: underline; }
+    header { background: #222; border-top: 4px solid var(--accent); border-bottom: 4px solid var(--accent); }
+    .nav-container { max-width:1400px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem 2rem; }
+    .nav-logo { font-family:'TitleFont'; font-size:2rem; color:var(--accent); }
+    nav a { margin-left:1rem; padding:0.5rem 1rem; background:var(--card); border-radius:var(--radius); transition:background .2s; }
+    nav a:hover { background:#333; }
+    .hero { background: url('') center/cover; border-top:4px solid var(--accent); border-bottom:4px solid var(--accent); text-align:center; padding:3rem 2rem; }
+    .hero h1 { font-family:'HeaderFont'; font-size:3rem; color:var(--accent); }
+    .hero p { font-size:1.2rem; color:#ccc; max-width:900px; margin:1rem auto; line-height:1.6; }
+    .container { max-width:1200px; margin:2rem auto; padding:0 2rem; }
+    .search { text-align:right; margin-bottom:1rem; }
+    .search input { width:100%; max-width:400px; padding:0.5rem 1rem; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); color:var(--fg); }
+    .group { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:1.5rem; padding:1rem; }
+    .group h2 { font-family:'HeaderFont'; font-size:1.6rem; color:var(--accent); margin-bottom:0.5rem; }
+    .subgroup { margin-left:var(--indent-step); margin-bottom:1rem; }
+    .subgroup h3 { font-family:'HeaderFont'; font-size:1.3rem; color:#ddd; margin-bottom:0.3rem; }
+    .item-list { list-style:none; }
+    .item-list li { margin-left:calc(var(--indent-step) * 2); padding:0.3rem 0; font-size:1rem; }
+    footer { background:var(--card); border-top:2px solid var(--border); padding:1.5rem 2rem; text-align:center; color:#888; font-size:0.9rem; }
+    /* Tooltip */
+    .tooltip { position:absolute; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:0.5rem; max-width:200px; display:none; z-index:100; }
+    .tooltip img { width:100%; height:auto; border-radius:var(--radius); margin-bottom:0.5rem; }
+    .tooltip p { font-size:0.85rem; color:#ccc; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="nav-logo">FREAX.WTF - WIKI</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#directory">Directory</a>
+        <a href="https://github.com/FREAX-WTF">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <h1>Directory</h1>
+    <p>Dive into our communities and members.</p>
+  </section>
+  <div class="container" id="directory">
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+    <!-- Communities Group -->
+    <div class="group" data-type="community">
+      <h2>Communities</h2>
+      <div class="subgroup">
+        <h3>Linux</h3>
+        <ul class="item-list">
+          <li><a href="https://allthingslinux.org" data-title="ATL" data-img="https://atl.wiki/images/c/c9/Logo.png" data-desc="General Linux chat for users and devs.">ATL</a></li>
+        </ul>
+        <h3>Cybersec</h3>
+        <ul class="item-list">
+          <li><a href="https://heartsec.art" data-title="Heartsec" data-img="https://wiki.freax.wtf/heartsec.png" data-desc="Owned by zestoric. W server">Heartsec</a></li>
+        </ul>
+      </div>
+      <div class="subgroup">
+        <h3>Programming</h3>
+        <ul class="item-list">
+          <li><a href="#" data-title="PyDevs" data-img="https://wiki.freax.wtf/pydevs.png" data-desc="placeholder">PyDevs</a></li>
+          <li><a href="#" data-title="DataSci" data-img="https://wiki.freax.wtf/datasci.png" data-desc="this is a fucking placeholder...">DataSci Discord</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- People Group -->
+    <div class="group" data-type="people">
+      <h2>People</h2>
+      <div class="item-list">
+        <li><a href="https://chiyo.wtf" data-title="Chiyo" data-img="https://chiyo.wtf/fumo.png" data-desc="Founder!">Chiyo Tanaka</a></li>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 FREAX.WTF — Bridging communities across Discord.
+  </footer>
+  <!-- Tooltip Element -->
+  <div class="tooltip" id="tooltip"></div>
+  <script>
+    // Search Filter
+    const searchInput = document.getElementById('searchInput');
+    const groups = document.querySelectorAll('.group');
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.toLowerCase();
+      groups.forEach(g => {
+        let anyVisible = false;
+        g.querySelectorAll('a').forEach(a => {
+          const match = a.textContent.toLowerCase().includes(q) || a.dataset.desc.toLowerCase().includes(q);
+          a.parentElement.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        g.style.display = anyVisible ? '' : 'none';
+      });
+    });
+    // Tooltip
+    const tooltip = document.getElementById('tooltip');
+    document.querySelectorAll('.item-list a').forEach(a => {
+      a.addEventListener('mousemove', e => {
+        tooltip.innerHTML = `<img src="${a.dataset.img}" alt=""><p>${a.dataset.desc}</p>`;
+        tooltip.style.display = 'block';
+        tooltip.style.top = e.pageY + 15 + 'px';
+        tooltip.style.left = e.pageX + 15 + 'px';
+      });
+      a.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
